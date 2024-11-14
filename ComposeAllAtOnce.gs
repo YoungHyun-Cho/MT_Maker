@@ -1,0 +1,4 @@
+function autoCreate() {
+  readData();
+  createMT();
+}

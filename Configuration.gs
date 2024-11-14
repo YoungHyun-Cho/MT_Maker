@@ -3,8 +3,8 @@ function myFunction() {
 }
 
 // 시트 이름 지정
-const SHEET_NAME_RAW_DATA       = "Raw_Data";
-const SHEET_NAME_EXTRACTED_DATA = "Extracted_Data";
+const SHEET_NAME_RAW_DATA       = "Step1";
+const SHEET_NAME_EXTRACTED_DATA = "Step2";
 const SHEET_NAME_RESULT         = "Result"
 
 // 시트 내의 데이터 타입 식별명(==드롭다운 값) 정의

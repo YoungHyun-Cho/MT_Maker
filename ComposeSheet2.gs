@@ -1,5 +1,6 @@
 function readData() {
     setSheet2(getRawData());
+    setLastRow();
 }
 
 const getRawData = () => {
@@ -54,4 +55,20 @@ const setC = (rawData, i) => {
   const cell = SHEET2.getRange("C" + (4 + i) );
 
   cell.setValue(rawData[i][3].replace(/\s+/g, ""));
+};
+
+const getLastRow = () => {
+  const startRow = 4; 
+  const column = 3; 
+
+  const data = SHEET2.getRange(startRow, column, SHEET2.getLastRow() - startRow + 1).getValues();
+
+  for (let i = data.length - 1; i >= 0; i--) {
+    if (data[i][0] !== "") return startRow + i;
+  }
+  return null;
+};
+
+const setLastRow = () => {
+  lastRow = getLastRow();
 };
